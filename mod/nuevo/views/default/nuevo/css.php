@@ -242,11 +242,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endCo
 	float: right;
     width: 200px;
 }
-.elgg-main > .elgg-module-register {
-	position: static;
-    right: 10px;
-    top: 20px;
-    width: 200px;
+fieldset .elgg-module {
+    margin: 5px 0;
+    width: 440px;
 }
 .elgg-module-register > .elgg-head {
 	background: #eee;

@@ -6,11 +6,26 @@ $english = array(
 	'nuevo:elgg'      		=> 'Powered by Traicosport',
 	'nuevo:pagetitle'		=> 'Welcome to Traicosport',
 	'nuevo:copyright'      	=> 'Copyright &copy; Traicosport.com',
-	'nuevo:register'		=> 'Welcome to registration',
+	'nuevo:register'		=> 'To start your sportsprofile on Traicosport, sign up to the left.. it\'s free!',
 	'nuevo:signup'			=> 'Go to registration',
 		// Index Quotes
-	'nuevo:teaser'			=> '<h1><span style="color:#74A5B2">Find</span> and <span style="color:#74A5B2">Share</span> everything about sports, clubs and sportsprofiles, which you care about.</h1>
-
+	'nuevo:teaserheader'	=> '<span style="color:#74A5B2">Find</span> and <span style="color:#74A5B2">Share</span> everything about<br /> the sports, clubs and sportsathletes you love..',
+	'nuevo:teaser'			=> '<div style="float:left;width:150px;margin:20px 20px 40px 0px;">
+                                    <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">Become a member through Facebook or Twitter..</span></p>
+                                </div>
+                                <div style="float:left;width:150px;margin:20px 40px;" id="login_with_facebook">
+                                	<a href="https://www.facebook.com/login.php?api_key=252770421408236&cancel_url=http%3A%2F%2Ftraicosport.com%2Fportal%2F&display=page&fbconnect=1&next=http%3A%2F%2Ftraicosport.com%2Fportal%2Ffacebook_connect%2Flogin&return_session=1&session_version=3&v=1.0&req_perms=user_status%2Cpublish_stream%2Cemail%2C">
+                                        <img src="http://traicosport.com/images/logo_facebook.jpg" alt="Facebook" />
+                                    </a>
+                                </div>
+                                <div style="float:left;width:150px;margin:20px 80px 40px 40px" id="login_with_twitter">
+                                	<a href="http://traicosport.com/portal/twitter_api/forward">
+                                        <img src="http://traicosport.com/images/logo_twitter.png" alt="Twitter" />
+                                    </a>
+                                </div>
+                                <div style="float:left;height:80px;width:200px;margin:20px 0px 40px 30px;background: url(http://demo.klubhjemmeside.dk/mod/nuevo/graphics/curved_arrow.png) no-repeat bottom right;">
+                                    <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">.. Or register by clicking<br /> the button</span></p>
+                                </div>
                             ',
 	'nuevo:subhead'			=> 'Gives you a direct contact to the world of sports..',
 	'nuevo:thewire'			=> 'What are you doing? Tell everyone on the wire:',
@@ -52,12 +67,23 @@ $english = array(
 	'nuevo:slide:three'	=> 'Fusce dolor. Nulla iaculis congue leo. Mauris risus velit, pulvinar ut, dignissim non, sagittis in, leo. Phasellus aliquet mi vel metus. Maecenas vestibulum lorem at velit. Morbi consequat metus a tellus.',
 	
 	'nuevo:h1:four'		=> 'Proin scelerisque',	
-	'nuevo:slide:four'	=> '<p>Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. Aliquam elementum imperdiet turpis.</p><p>In id metus. Mauris eu nisl. Nam pharetra nisi nec enim. Nulla aliquam, tellus sed laoreet blandit, eros urna vehicula lectus, et vulputate mauris arcu ut arcu. Praesent eros metus, accumsan a, malesuada et, commodo vel, nulla. Aliquam sagittis auctor sapien.</p>',	 
-		
-	// register	
-	'nuevo:register:text'	=> '<p>When you fill out the form on the left, there are a couple of things you need to bear in mind. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy.</p><p>This text can be changed in the theme language file.</p>',
-	
-	// demo	
+	'nuevo:slide:four'	=> '<p>Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. Aliquam elementum imperdiet turpis.</p><p>In id metus. Mauris eu nisl. Nam pharetra nisi nec enim. Nulla aliquam, tellus sed laoreet blandit, eros urna vehicula lectus, et vulputate mauris arcu ut arcu. Praesent eros metus, accumsan a, malesuada et, commodo vel, nulla. Aliquam sagittis auctor sapien.</p>',
+
+	// register
+	'nuevo:register:text'	=> '<p>Save time by using the Facebook or Twitter button. Later on you can use them to login, and <b>send tweets to your Twitter account through Traicosport</b>.</p>
+                                <div style="float:left;width:150px;margin:20px 40px;" id="login_with_facebook">
+                                	<a href="https://www.facebook.com/login.php?api_key=252770421408236&cancel_url=http%3A%2F%2Ftraicosport.com%2Fportal%2F&display=page&fbconnect=1&next=http%3A%2F%2Ftraicosport.com%2Fportal%2Ffacebook_connect%2Flogin&return_session=1&session_version=3&v=1.0&req_perms=user_status%2Cpublish_stream%2Cemail%2C">
+                                        <img src="http://traicosport.com/images/logo_facebook.jpg" alt="Facebook" />
+                                    </a>
+                                </div>
+                                <div style="float:left;width:150px;margin:20px 80px 40px 40px" id="login_with_twitter">
+                                	<a href="http://traicosport.com/portal/twitter_api/forward">
+                                        <img src="http://traicosport.com/images/logo_twitter.png" alt="Twitter" />
+                                    </a>
+                                </div>
+                                ',
+
+	// demo
 	'nuevo:demo:title'		=> 'Info',
 	'nuevo:demo:text'		=> '<p>Pass any content from the included demo file to Elgg secondary sidebar.</p><p>For example Google AdSense.</p>',
 		
