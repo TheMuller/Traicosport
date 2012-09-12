@@ -1,5 +1,6 @@
-<?php 
+<?php
 
-	if($free_text = elgg_get_plugin_setting("registration_free_text", "profile_manager")){
-		echo elgg_view("output/longtext", array("value" => $free_text));
-	}
+$title = elgg_echo("profile_manager:registration_header");
+$text = elgg_echo("profile_manager:registration_text");
+
+echo elgg_view_module('register', $title, $text);

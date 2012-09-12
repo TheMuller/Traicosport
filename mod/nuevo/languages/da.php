@@ -9,21 +9,21 @@ $danish = array(
 	'nuevo:register'		=> 'Welcome to registration',
 	'nuevo:signup'			=> 'Registrer dig her',
 		// Index Quotes
-	'nuevo:teaser'			=> '<h1><span style="color:#74A5B2">Find</span> og <span style="color:#74A5B2">Del</span> alt om de sportsgrene, klubber og sportsprofiler, som du interesserer dig for.</h1>
-                                <div style="float:left;width:150px;margin:40px 0px 40px 0px;">
-                                    <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">Forbind med Facebook eller Twitter..</span></p>
+	'nuevo:teaserheader'	=> '<span style="color:#74A5B2">Find</span> og <span style="color:#74A5B2">Del</span> alt om de sportsgrene, klubber og sportsprofiler, som du interesserer dig for.',
+	'nuevo:teaser'			=> '<div style="float:left;width:150px;margin:20px 20px 40px 0px;">
+                                    <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">Opret dig med Facebook eller Twitter..</span></p>
                                 </div>
-                                <div style="float:left;width:150px;margin:40px 40px;" id="login_with_facebook">
+                                <div style="float:left;width:150px;margin:20px 40px;" id="login_with_facebook">
                                 	<a href="https://www.facebook.com/login.php?api_key=252770421408236&cancel_url=http%3A%2F%2Ftraicosport.com%2Fportal%2F&display=page&fbconnect=1&next=http%3A%2F%2Ftraicosport.com%2Fportal%2Ffacebook_connect%2Flogin&return_session=1&session_version=3&v=1.0&req_perms=user_status%2Cpublish_stream%2Cemail%2C">
                                         <img src="http://traicosport.com/images/logo_facebook.jpg" alt="Facebook" />
                                     </a>
                                 </div>
-                                <div style="float:left;width:150px;margin:40px 40px;" id="login_with_twitter">
+                                <div style="float:left;width:150px;margin:20px 80px 40px 40px" id="login_with_twitter">
                                 	<a href="http://traicosport.com/portal/twitter_api/forward">
                                         <img src="http://traicosport.com/images/logo_twitter.png" alt="Twitter" />
                                     </a>
                                 </div>
-                                <div style="float:left;height:80px;width:200px;margin:40px 0px 40px 30px;background: url(http://demo.klubhjemmeside.dk/mod/nuevo/graphics/curved_arrow.png) no-repeat bottom right;background-size:80px 60px;">
+                                <div style="float:left;height:80px;width:200px;margin:20px 0px 40px 30px;background: url(http://demo.klubhjemmeside.dk/mod/nuevo/graphics/curved_arrow.png) no-repeat bottom right;background-size:80px 60px;">
                                     <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">.. Eller registrer dig via knappen</span></p>
                                 </div>
                             ',

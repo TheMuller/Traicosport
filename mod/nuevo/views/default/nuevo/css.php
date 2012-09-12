@@ -16,8 +16,13 @@
     line-height: 1.4em;
     color:#333;
 }
-.index_teaser .signin-text{
+.index_teaser .signin-header{
 	width:840px;
+	position:relative;
+    float:left;
+}
+.index_teaser .signin-text{
+	width:100%;
 	position:relative;
     float:left;
 }
@@ -235,6 +240,12 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endCo
 	-moz-box-shadow: 0 0 0 1px #e3e3e3;
 	box-shadow: 0 0 0 1px #e3e3e3;	
 	float: right;
+    width: 200px;
+}
+.elgg-main > .elgg-module-register {
+	position: static;
+    right: 10px;
+    top: 20px;
     width: 200px;
 }
 .elgg-module-register > .elgg-head {

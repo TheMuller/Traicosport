@@ -30,7 +30,10 @@
 
 		'admin:users:export' => "Export users",
 		'admin:users:inactive' => "List inactive users",
-	
+
+		'profile_manager:registration_header' => 'Velkommen til registrering',
+		'profile_manager:registration_text' => 'Registrer dig her.',
+
 		// plugin settings
 		'profile_manager:settings:registration' => 'Registrering',
 		'profile_manager:settings:edit_profile' => 'Ændre Profil',
