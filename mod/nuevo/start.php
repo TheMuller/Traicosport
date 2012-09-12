@@ -17,6 +17,21 @@ function nuevo_init() {
 		elgg_extend_view('js/elgg', 'js/update');
 	}
 
+    elgg_unregister_menu_item('site', 'blog');
+    elgg_unregister_menu_item('site', 'bookmarks');
+    elgg_unregister_menu_item('site', 'photos');
+    elgg_unregister_menu_item('site', 'file');
+    elgg_unregister_menu_item('site', 'thewire');
+
+    elgg_register_menu_item('page', array(
+    'name' => 'friends_request',
+    'text' => '<img scr="http://traicosport.com/portal/mod/traico2/graphics/facebook_icon.jpg"> Invite Facebook friends',
+    'href' => 'http://www.facebook.com/dialog/apprequests?
+  app_id=252770421408236&
+  message=Share%20your%20sport%20with%20the%20world!&
+  redirect_uri=http://www.traicosport.com/',
+));
+
 	elgg_register_event_handler('pagesetup', 'system', 'nuevo_theme_pagesetup_handler', 1000);
 
 	elgg_register_js('jquery.flexslider-min', 'mod/nuevo/vendors/js/jquery.flexslider-min.js', 'footer');

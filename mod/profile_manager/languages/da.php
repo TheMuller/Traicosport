@@ -362,7 +362,7 @@
 		'profile_manager:register:profile_icon' => 'This site requires you to upload a profile icon',
 		
 		// register accept terms
-		'profile_manager:registration:accept_terms' => "Jeg har hermed accepterer betingelserne %sTerms of Service%",
+		'profile_manager:registration:accept_terms' => "Jeg har hermed accepterera alle gode store betingelserne %sTerms of Service%",
 	
 		// simple access control
 		'profile_manager:simple_access_control' => 'Vælg hvem der må se din profil informationer',
