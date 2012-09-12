@@ -1,0 +1,107 @@
+= Version history =
+
+2012.07.16:
+
+- Updated to Elgg 1.8.8
+- Added: avatar_menu_arrows.png
+- Added: i device click event listener
+- Added: tidypics support - photos/css.php
+
+2012.06.27:
+
+- Updated to Elgg 1.8.6
+- Removed: page/walled_garden.php
+
+2012.06.10:
+
+- Added: changelog, nuevo/CHANGES.txt
+
+2012.06.07:
+
+- Updated to Elgg 1.8.5
+- Added: responsive layout
+- Added: responsive setting
+- Added: teaser setting
+
+2012.04.28:
+
+- Updated to Elgg 1.8.4
+
+2012.03.04:
+
+- Added: ajax updates to the river from the Wire form on page Activity
+
+2012.01.25:
+
+- Added: layout setting
+
+2012.01.12:
+
+- Updated to Elgg 1.8.3
+- Updated: manifest.xml
+- Updated: views/default/css/elements/modules.php
+
+2012.01.10:
+
+- Fixed: issue with logged out messages in walled garden mode
+
+2012.01.05:
+
+- Added: walled garden support
+
+2011.12.26:
+
+- Updated to Elgg 1.8.2
+- Updated: views/default/page/default.php
+- Updated: views/default/css/elements/ - typography.php, navigation.php, modules.php, layout.php, forms.php, components.php.
+
+2011.12.11:
+
+- Updated: deprecated functions 
+- Fixed: moved settings to new location - plugins/
+- Added: the wire post form to activity page
+- Added: the wire setting
+- Added: theme administration link
+
+2011.11.28:
+
+- Added: admin CSS
+- Fixed: setting, redirect after login
+
+2011.11.25:
+
+- Fixed: CSS issues with IE 7, 8 and 9
+
+2011.11.21:
+
+- Updated to Elgg 1.8.1
+- Updated: navigation css
+- Updated: search view
+- Moved: custom index conflict warning from start.php to manifest.xml
+- Changed: manifest > requires > version to follow elgg mod standard
+
+2011.10.15:
+
+- Added: Redirect options after login - settings
+
+2011.10.12:
+
+- Updatet to Elgg 1.8.1 b1
+- Updated: SudoSlider to version 2.1.4
+- Added: Folder PSD, psd file included to ease slides editing
+- Added: Show profile icon on page activity - settings
+- Added: Show friends on page activity - settings
+- Added: Show info module on register page - settings
+- Added: Show Elgg footer link - settings
+- Added: Search box jQuery autoexpand
+- Changed: Changelog now part of nuevo.pdf
+- Changed: Welcome text on page register made optional in theme settings
+
+2011.10.12:
+
+- Latest working release for Elgg 1.7.14
+
+2011.09.02:
+
+- Updatet to Elgg 1.7.11
+- Fixed: depricated notices for elgg_extend_view
