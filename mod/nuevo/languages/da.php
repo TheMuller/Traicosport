@@ -82,10 +82,17 @@ $danish = array(
                                     </a>
                                 </div>
                                 ',
-	// demo	
+	// demo
 	'nuevo:demo:title'		=> 'Info',
 	'nuevo:demo:text'		=> '<p>Pass any content from the included demo file to Elgg secondary sidebar.</p><p>For example Google AdSense.</p>',
-		
+
+    //extras
+	'nuevo:fb_friends'		=> 'Inviter Facebook venner',
+    'nuevo:groupsmember' => 'Dine grupper',
+    'nuevo:groupsmember-no' => 'Du er endnu ikke medlem af nogen grupper',
+    'nuevo:join' => 'Bliv medlem af gruppen',
+    'nuevo:viewmore' => 'Vis mere',
+
 );
 
 add_translation("da", $danish);

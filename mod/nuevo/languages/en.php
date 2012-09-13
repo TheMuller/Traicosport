@@ -86,7 +86,13 @@ $english = array(
 	// demo
 	'nuevo:demo:title'		=> 'Info',
 	'nuevo:demo:text'		=> '<p>Pass any content from the included demo file to Elgg secondary sidebar.</p><p>For example Google AdSense.</p>',
-		
+
+    //extras
+	'nuevo:fb_friends'		=> 'Invite Facebook friends',
+    'nuevo:groupsmember' => 'Group Membership',
+    'nuevo:groupsmember-no' => 'You are not a member of any of the groups in this Network',
+    'nuevo:join' => 'Join a Group',
+    'nuevo:viewmore' => 'View More',
 );
 
 add_translation("en", $english);
