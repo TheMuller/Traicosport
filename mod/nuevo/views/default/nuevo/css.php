@@ -17,7 +17,6 @@
     color:#333;
 }
 .index_teaser .signin-header{
-	width:840px;
 	position:relative;
     float:left;
 }

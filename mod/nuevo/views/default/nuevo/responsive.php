@@ -37,6 +37,8 @@ html {
     .elgg-heading-site, .elgg-heading-site:hover {
         display: block;
         text-align:center;
+        background: #2E2E2E url(<?php echo $vars['url']; ?>mod/nuevo/graphics/traico/logo.png) no-repeat bottom left;
+        height: 66px;
     }
     .elgg-page-header .elgg-inner h2 {
         display:block;
