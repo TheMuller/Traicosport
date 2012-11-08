@@ -1,29 +1,10 @@
 <?php
 /**
-* Core Danish Language
-*
-* @package Elgg.Core
-* @subpackage Languages.Danish
-* @version Id: da.php 2011.08.15
-* @source file is Copyright (c) 2008-2010 Curverider Ltd
-* @modified and translated by Elggzone
-* @link http://www.perjensen-online.dk
-* @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
-*
-* This file is part of the Danish language package for Elgg 1.8
-* Copyright (c) 2010-2011 Elggzone
-*
-* The package is free software; you can redistribute it and/or modify it under the terms of the GNU
-* General Public License as published by the Free Software Foundation, version 2 of the License.
-
-* The Danish language package is distributed in the hope that it will be useful, but WITHOUT ANY
-* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-* A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License along with this language
-* package. If not, see <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>.
-*
-*/
+ * Core Danish Language
+ *
+ * @package Elgg.Core
+ * @subpackage Languages.Danish
+ */
 
 $danish = array( 
 	/**
@@ -56,6 +37,7 @@ $danish = array(
 * Errors
 */ 
 	'exception:title'  =>  "Fatal fejl.",
+	'exception:contact_admin' => 'En uerstattelig fejl er opstået og er blevet skrevet i fejl log. Kontakt administratoren for siden med følgende information:',
 	
 	'actionundefined'  =>  "Den forespurgte handling (%s) var ikke defineret i systemet.",
 	'actionnotfound' => "Filen til %s blev ikke fundet.", 	  
@@ -74,6 +56,7 @@ $danish = array(
 	'DatabaseException:DBSetupIssues'  =>  "Der var følgende problemer: ", 
 	'DatabaseException:ScriptNotFound'  =>  "Elgg kunne ikke finde det efterspurgte database script på %s.",
 	'DatabaseException:InvalidQuery' => "Ugyldig forespørgsel", 
+	'DatabaseException:InvalidDBLink' => "Forbindelse til database blev tabt.",
 	
 	'IOException:FailedToLoadGUID' => "Failed to load new %s from GUID:%d", 
 	'InvalidParameterException:NonElggObject'  =>  "Passing a non-ElggObject to an ElggObject constructor!", 
@@ -88,6 +71,7 @@ $danish = array(
 	'PluginException:InvalidManifest' => 'Ugyldig manifestfil til plugin %s',
 	'PluginException:InvalidPlugin' => '%s er ikke en gyldig plugin.',
 	'PluginException:InvalidPlugin:Details' => '%s er ikke en gyldig plugin: %s',
+	'PluginException:NullInstantiated' => 'ElggPlugin kan ikke blive instantieres. Du skal bestå en GUID, en plugin ID, eller en fuldkommen sti.',
 	
 	'ElggPlugin:MissingID' => 'Mangler plugin ID (guid %s)',
 	'ElggPlugin:NoPluginPackagePackage' => 'Mangler ElggPluginPackage til plugin ID %s (guid %s)',
@@ -121,6 +105,8 @@ $danish = array(
 	'ElggPlugin:Dependencies:Priority:Before' => 'Før %s',
 	'ElggPlugin:Dependencies:Priority:Uninstalled' => '%s er ikke installeret',
 	'ElggPlugin:Dependencies:Suggests:Unsatisfied' => 'Mangler',
+
+	'ElggPlugin:InvalidAndDeactivated' => '%s er en ugyldig plugin og er blevet deaktiveret.',
 	
 	'InvalidParameterException:NonElggUser' => "Passing a non-ElggUser to an ElggUser constructor!",
 
@@ -183,12 +169,13 @@ $danish = array(
 	'InvalidParameterException:DoesNotBelongOrRefer' => "Does not belong to entity or refer to entity.",
 	'InvalidParameterException:MissingParameter' => "Missing parameter, you need to provide a GUID.",
 	'InvalidParameterException:LibraryNotRegistered' => '%s is not a registered library',
+	'InvalidParameterException:LibraryNotFound' => 'Kunne ikke loade %s biblioteket fra %s',
 	
 	'APIException:ApiResultUnknown' => "API Result is of an unknown type, this should never happen.",
 	'ConfigurationException:NoSiteID' => "No site ID has been specified.",
 	'SecurityException:APIAccessDenied' => "Sorry, API access has been disabled by the administrator.",
 	'SecurityException:NoAuthMethods' => "No authentication methods were found that could authenticate this API request.",	
-	'SecurityException:UnexpectedOutputInGatekeeper' => 'Unexpected output in gatekeeper call. Halting execution for security. Search http://docs.elgg.org/ for more information.',
+	'SecurityException:ForwardFailedToRedirect' => 'Redirect could not be issued due to headers already being sent. Halting execution for security. Search http://docs.elgg.org/ for more information.',
 	'InvalidParameterException:APIMethodOrFunctionNotSet' => "Method or function not set in call in expose_method()",
 	'InvalidParameterException:APIParametersArrayStructure' => "Parameters array structure is incorrect for call to expose method '%s'", 
 	'InvalidParameterException:UnrecognisedHttpMethod' => "Unrecognised http method %s for api method '%s'",
@@ -241,17 +228,19 @@ $danish = array(
 	'LoginException:UsernameFailure' => 'Vi kunne ikke logge dig ind. Tjek venligst dit brugernavn og adgangskode.',
 	'LoginException:PasswordFailure' => 'Vi kunne ikke logge dig ind. Tjek venligst dit brugernavn og adgangskode.',
 	'LoginException:AccountLocked' => 'Din konto er blevet spærret på grund af for mange log ind fejl.',
-
-	'memcache:notinstalled' => 'PHP memcache module not installed, you must install php5-memcache',
-	'memcache:noservers' => 'No memcache servers defined, please populate the $CONFIG->memcache_servers variable',
-	'memcache:versiontoolow' => 'Memcache needs at least version %s to run, you are running %s',
-	'memcache:noaddserver' => 'Multiple server support disabled, you may need to upgrade your PECL memcache library',
+	'LoginException:ChangePasswordFailure' => 'Fejlede i nuværende password check.',
 		
 	'deprecatedfunction' => 'Warning: This code uses the deprecated function \'%s\' and is not compatible with this version of Elgg',
 	
 	'pageownerunavailable' => 'Warning: The page owner %d is not accessible!',
 	'viewfailure' => 'There was an internal failure in the view %s',
 	'changebookmark' => 'Vær venlig at ændre dit bogmærke til denne side',
+	'noaccess' => 'Du skal logge ind for at se dette indhold, indholdet er fjernet eller du har ikke tilladelse til at se det.',
+	'error:missing_data' => 'Der mangler noget data i din anmodning',
+
+	'error:default' => 'Oops...der var noget der gik galt.',
+	'error:404' => 'Beklager. Vi kunne ikke finde siden, som du søgte efter.',
+
 	/**
 	* API
 	*/	
@@ -279,6 +268,8 @@ $danish = array(
 	'PUBLIC'  =>  "Offentlig",
 	'access:friends:label' => "Venner",
 	'access' => "Adgang", 
+	'access:limited:label' => "Begrænset",
+	'access:help' => "Adgangsniveau",
 	
 	/**
 	* Dashboard and widgets
@@ -310,7 +301,7 @@ $danish = array(
 	* Groups
 	*/
 	
-	'group'  =>  "Gruppe", 
+	'group'  =>  "Gruppe",
 	'item:group'  =>  "Grupper",
 	
 	/**
@@ -361,23 +352,28 @@ $danish = array(
 	'friends:nocollectionname'  =>  "Du er nødt til at give din liste et navn, før den kan oprettes.", 
 	'friends:collections:members' => "Venneliste",
 	'friends:collections:edit' => "Rediger liste",
+	'friends:collections:edited' => "Gemt liste",
+	'friends:collection:edit_failed' => 'Kunne ikke gemme liste.',
 	
 	'friendspicker:chararray' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ',
 
-	'avatar' => 'Profilbillede',
-	'avatar:create' => 'Opret mit profilbillede',
-	'avatar:edit' => 'Rediger profilbillede',
+	'avatar' => 'Avatar',
+	'avatar:create' => 'Opret din avatar',
+	'avatar:edit' => 'Rediger avatar',
 	'avatar:preview' => 'Forhåndsvisning',
-	'avatar:upload' => 'Upload et nyt profilbillede',
-	'avatar:current' => 'Nuværende profilbillede',
-	'avatar:crop:title' => 'Beskæringsværktøj til TraicoSport profilbillede',
-	'avatar:upload:instructions' => "Dit profilbillede vises på hele sitet. Du kan ændre den lige så tit du har lyst. (Filformater der accepteres: GIF, JPG eller PNG)",
-	'avatar:create:instructions' => 'Klik med venstre museknappe på billedet og hold den nede. Træk så en firkant henover det område, som du ønsker dit profilbillede beskåret. Et eksempel på dit profilbillede vises i boksen til højre. Når du er tilfreds med forhåndsvisningen, klikker du på \'Opret min profilbillede \'. Denne redigerede version vil blive anvendt på hele sitet som dit profilbillede.',
-	'avatar:upload:success' => 'Dit profilbillede er hermed uploaded',
-	'avatar:upload:fail' => 'Der skete desværre en fejl under upload af dit profilbillede. Prøv venligst igen.',
-	'avatar:resize:fail' => 'Ændring af størrelsen på dit profilbillede mislykkedes',
-	'avatar:crop:success' => 'Beskæring af profilbilledet lykkedes.',
-	'avatar:crop:fail' => 'Beskæring af profilbilledet fejlede. Prøv venligst igen.',
+	'avatar:upload' => 'Upload en ny avatar',
+	'avatar:current' => 'Nuværende avatar',
+	'avatar:remove' => 'Fjern dit profilbillede og skift til standard ikon',
+	'avatar:crop:title' => 'Avatar beskæringsværktøj',
+	'avatar:upload:instructions' => "Din avatar vises på hele sitet. Du kan ændre den så tit du har lyst. (Filformater der accepteres: GIF, JPG eller PNG)",
+	'avatar:create:instructions' => 'Klik og træk en firkant nedenfor for at vise, hvordan du ønsker din avatar beskåret. Et eksempel vises i boksen til højre. Når du er tilfreds med forhåndsvisningen, klikker du på \'Opret din avatar \'. Denne redigerede version vil blive anvendt på hele sitet som din avatar.',
+	'avatar:upload:success' => 'Avatar uploaded',
+	'avatar:upload:fail' => 'Avatar upload fejlede',
+	'avatar:resize:fail' => 'Ændring af størrelsen på din avatar mislykkedes',
+	'avatar:crop:success' => 'Beskæring af avataren lykkedes',
+	'avatar:crop:fail' => 'Beskæring af avataren fejlede',	
+	'avatar:remove:success' => 'Hermed fjernet dit profilbillede',
+	'avatar:remove:fail' => 'Der opstod en fejl i fjernelsen af dit profilbillede',
 
 	'profile:edit' => "Rediger profil",
 	'profile:aboutme' => "Om mig",
@@ -393,6 +389,14 @@ $danish = array(
 	'profile:twitter' => "Twitter brugernavn",
 	'profile:saved' => "Din profil blev gemt.",
 
+	'profile:field:text' => 'Kort tekst',
+	'profile:field:longtext' => 'Stort tekst område',
+	'profile:field:tags' => 'Tags',
+	'profile:field:url' => 'Web adresse',
+	'profile:field:email' => 'Email adresse',
+	'profile:field:location' => 'Sted',
+	'profile:field:date' => 'Date',
+
 	'admin:appearance:profile_fields' => 'Rediger profil felter',		
 	'profile:edit:default' => 'Rediger profil felter',
 	'profile:label' => "Navn",
@@ -404,6 +408,8 @@ $danish = array(
 	'profile:explainchangefields' => "Du kan erstatte de eksisterende felter i profilen med dine egne ved hjælp af formularen nedenfor. \n\n Giv det nye profilfelt en navn, for eksempel, 'Favorit hold', vælg derefter felt type (f.eks tekst, url, tags), og klik på knappen 'Tilføj'. For at ændre rækkefølgen af felterne træk i markeringen ved siden af navnet. For at redigere et feltnavn - klik på navnet for at gøre teksten redigerbar. \n\n Du kan altid vende tilbage til standardindstillingerne for profilen, men du vil miste alle data, der allerede er tilføjet i de brugerdefinerede felter på profil sider.",
 	'profile:editdefault:success' => 'Element føjet til standard profilen',
 	'profile:editdefault:fail' => 'Standard profilen kunne ikke gemmes',
+	'profile:field_too_long' => 'Kan ikke gemme din profil information, fordi "%s" sektionen er for lang.',
+	'profile:noaccess' => "Du har ikke tilladelse til at ændre denne profil.",
 
 
 /**
@@ -420,33 +426,38 @@ $danish = array(
 /**
  * River
  */
-	'river' => "TraicoStream",
+	'river' => "River",
 	'river:friend:user:default' => "%s er nu ven med %s",
-	'river:update:user:avatar' => '%s har oprettet et nyt profilbillede',
-	'river:noaccess' => 'Du har ikke tilladelse til at se denne side.',
+	'river:update:user:avatar' => '%s har oprettet en ny avatar',
+	'river:update:user:profile' => '%s har opdateres profilen',
+	'river:noaccess' => 'Du har ikke tilladelse til at se dette element.',
 	'river:posted:generic' => '%s postede',
 	'riveritem:single:user' => 'en bruger',
 	'riveritem:plural:user' => 'nogle grugere',
 	'river:ingroup' => 'i gruppen %s',
-	'river:none' => 'Skriv hvad du laver lige nu, og så har du allerede været aktiv på siden.<p>Du kan også oprette en gruppe til dit team, din klub eller noget helt tredje.</p>',
+	'river:none' => 'Ingen aktivitet',
+	'river:update' => 'Opdateret for %s',
+	'river:delete:success' => 'Aktivitets emne er blevet fjernet',
+	'river:delete:fail' => 'Aktivitets emne kunne ikke slettes',
 
-	'river:widget:title' => "TraicoStream",
-	'river:widget:description' => "Vis seneste streams",
-	'river:widget:type' => "Type af streams",
-	'river:widgets:friends' => 'Vennernes TraicoStreams',
-	'river:widgets:all' => 'Alle TraicoStreams',
+	'river:widget:title' => "Aktivitet",
+	'river:widget:description' => "Vis seneste aktivitet",
+	'river:widget:type' => "Type af aktivitet",
+	'river:widgets:friends' => 'Venners aktivitet',
+	'river:widgets:all' => 'Al aktivitet',
 	
 /**
  * Notifications
  */
-	'notifications:usersettings' => "Indstillinger for beskeder",
+	'notifications:usersettings' => "Indstillinger for notifikationer",
 	'notifications:methods' => "Angiv hvilke metoder du vil tillade.",
+	'notification:method:email' => 'Email',
 
-	'notifications:usersettings:save:ok' => "Dine indstillinger for beskeder er gemt.",
+	'notifications:usersettings:save:ok' => "Dine indstillinger for notifikationer er gemt.",
 	'notifications:usersettings:save:fail' => "Der opstop et problem med at gemme dine indstillinger for beskeder.",
 
-	'user.notification.get' => 'Vis indstillinger for beskeder for en given bruger.',
-	'user.notification.set' => 'Angiv indstillinger for beskeder for en given bruger.',
+	'user.notification.get' => 'Vis indstillinger for notifikationer for en given bruger.',
+	'user.notification.set' => 'Angiv indstillinger for notifikationer for en given bruger.',
 /**
  * Search
  */
@@ -481,19 +492,21 @@ $danish = array(
 	'account' => "Konto",
 	'settings' => "Indstillinger",
 	'tools' => "Værktøjer",
+	'settings:edit' => 'Ændre indstillinger',
 
 	'register' => "Registrer",
 	'registerok' => "Du er nu tilmeldt %s.",
 	'registerbad' => "Din registrering mislykkedes på grund af en ukendt fejl.",
 	'registerdisabled' => "Registrering er blevet deaktiveret af systemadministratoren",
+	'register:fields' => 'Alle felter er krævede',
 
 	'registration:notemail' => 'Den e-mail adresse, du angav, synes ikke at være en gyldig e-mail adresse.',
 	'registration:userexists' => 'Brugernavnet er allerede i brug',
 	'registration:usernametooshort' => 'Dit brugernavn skal være mindst på %u tegn.',
+	'registration:usernametoolong' => 'Dit brugernavn er for lang. Det kan maks. bruge %u tegn.',
 	'registration:passwordtooshort' => 'Din adgangskode skal være på mindst %u tegn.',
 	'registration:dupeemail' => 'Denne e-mail adresse er allerede registreret.',
 	'registration:invalidchars' => 'Beklager, dit brugernavn indeholder følgende ugyldige tegn: %s.  Alle disse tegn er ugyldige: %s',
-	
 	'registration:emailnotvalid' => 'Beklager, den e-mail adresse, du indtastede er ugyldig på dette system',
 	'registration:passwordnotvalid' => 'Beklager, den adgangskode, du indtastede er ugyldig på dette system',
 	'registration:usernamenotvalid' => 'Beklager, det brugernavn, du indtastede, er ugyldigt på dette system',		
@@ -518,6 +531,7 @@ $danish = array(
 	'user:password:fail:incorrect_current_password' => 'Den nuværende indtastede adgangskode er forkert.',
 	'user:resetpassword:unknown_user' => 'Ugyldig bruger.',
 	'user:resetpassword:reset_password_confirm' => 'Nulstilling af din adgangskode vil sende en e-mail med en ny adgangskode til din registrerede e-mail adresse.',
+
 	'user:set:language' => "Sprogindstillinger",
 	'user:language:label' => "Dit sprog",
 	'user:language:success' => "Dine sprogindstillinger er blevet opdateret.",
@@ -549,6 +563,7 @@ $danish = array(
 
 	'admin:configuration:success' => "Dine indstillinger er blevet gemt.",
 	'admin:configuration:fail' => "Dine indstillinger kunne ikke gemmes.",
+	'admin:configuration:dataroot:relative_path' => 'Kan ikke sætte "%s" som datarod for det ikke er en absolut sti.',
 
 	'admin:unknown_section' => 'Ugyldig adminsektion.',
 
@@ -557,8 +572,10 @@ $danish = array(
 
 	'admin:statistics' => "Statistik",
 	'admin:statistics:overview' => 'Oversigt',
+	'admin:statistics:server' => 'Server Info',
 
 	'admin:appearance' => 'Udseende',
+	'admin:administer_utilities' => 'Hjælpeprogrammer',
 	'admin:utilities' => 'Hjælpeprogrammer',
 
 	'admin:users' => "Brugere",
@@ -592,6 +609,7 @@ $danish = array(
 	'admin:widget:admin_welcome:help' => "En kort introduktion til Elggs admininistrationspanel",
 	'admin:widget:admin_welcome:intro' =>
 'Velkommen til Elgg! Lige nu kigger du på administrationsdelens instrumentpanel. Det er nyttigt til give overblik over, hvad der sker på sitet.',
+
 	'admin:widget:admin_welcome:admin_overview' =>
 "Navigation til administrationspanelet er i menuen til højre. Den er organiseret i"
 . " tre dele:
@@ -605,6 +623,12 @@ $danish = array(
 	// argh, this is ugly
 	'admin:widget:admin_welcome:outro' => '<br />Sørg for at tjekke de ressourcer, der er til rådighed via link i footer og tak fordi du anvender Elgg!',
 
+	'admin:widget:control_panel' => 'Kontrol panel',
+	'admin:widget:control_panel:help' => "Leverer en nem adgang til fælles styring",
+
+	'admin:cache:flush' => 'Nulstil caches',
+	'admin:cache:flushed' => "Sidens caches er blevet nulstillet",
+
 	'admin:footer:faq' => 'Administration FAQ',
 	'admin:footer:manual' => 'Administration Manual',
 	'admin:footer:community_forums' => 'Elgg Community Forums',
@@ -614,7 +638,8 @@ $danish = array(
 	'admin:plugins:category:active' => 'Aktive plugins',
 	'admin:plugins:category:inactive' => 'Inaktive plugins',
 	'admin:plugins:category:admin' => 'Admin',
-	'admin:plugins:category:bundled' => 'Medfølgende',
+	'admin:plugins:category:bundled' => 'Originalt',
+	'admin:plugins:category:nonbundled' => 'Ikke originalt',
 	'admin:plugins:category:content' => 'Indhold',
 	'admin:plugins:category:development' => 'Udvikling',
 	'admin:plugins:category:enhancement' => 'Forbedringer',
@@ -625,6 +650,7 @@ $danish = array(
 	'admin:plugins:category:multimedia' => 'Multimedia',
 	'admin:plugins:category:theme' => 'Temaer',
 	'admin:plugins:category:widget' => 'Widgets',
+	'admin:plugins:category:utility' => 'Hjælpeprogrammer',
 
 	'admin:plugins:sort:priority' => 'Prioritet',
 	'admin:plugins:sort:alpha' => 'Alfabetisk',
@@ -642,6 +668,7 @@ $danish = array(
 /**
  * Plugins
  */
+	'plugins:disabled' => 'Plugins bliver ikke loaded, fordi en fil ved navnet "inaktiveret" er i "mod" biblioteket.',
 	'plugins:settings:save:ok' => "Indstillinger for %s plugin er blevet gemt.",
 	'plugins:settings:save:fail' => "Der var problemer med at gemme indstillinger for %s plugin.",
 	'plugins:usersettings:save:ok' => "Bruger indstillinger for %s plugin er blevet gemt.",
@@ -669,24 +696,23 @@ $danish = array(
 	'admin:plugins:warning:elgg_version_unknown' => 'Dette plugin bruger en ugyldig manifest fil og angiver ikke en kompatibel Elgg version. Det vil sandsynligvis ikke fungere!',
 	'admin:plugins:warning:unmet_dependencies' => 'Dette plugin har udækkede afhængigheder og kan ikke aktiveres. Tjek afhængigheder under mere info.',
 	'admin:plugins:warning:invalid' => '%s er ikke et gyldigt Elgg plugin.  Tjek <a href="http://docs.elgg.org/Invalid_Plugin">the Elgg documentation</a> for tip til fejlfinding.',
+	'admin:plugins:warning:invalid:check_docs' => 'Check <a href="http://docs.elgg.org/Invalid_Plugin">the Elgg documentation</a> for tip til fejlfinding.',
 	'admin:plugins:cannot_activate' => 'kan ikke aktivere',
 
 	'admin:plugins:set_priority:yes' => "Flyttede %s.",
 	'admin:plugins:set_priority:no' => "Kunne ikke flytte %s.",
+	'admin:plugins:set_priority:no_with_msg' => "Kunne ikke omsortere %s. Fejl: %s",
 	'admin:plugins:deactivate:yes' => "Deaktiverede %s.",
 	'admin:plugins:deactivate:no' => "Kunne ikke deaktivere %s.",
+	'admin:plugins:deactivate:no_with_msg' => "Kunne ikke inaktivere %s. Fejl: %s",
 	'admin:plugins:activate:yes' => "Aktiverede %s.",
 	'admin:plugins:activate:no' => "Kunne ikkeaktivere %s.",
+	'admin:plugins:activate:no_with_msg' => "Kunne ikke aktivere %s. Fejl: %s",
 	'admin:plugins:categories:all' => 'Alle kategorier',
 	'admin:plugins:plugin_website' => 'Plugin website',
 	'admin:plugins:author' => '%s',
 	'admin:plugins:version' => 'Version %s',
-	'admin:plugins:simple' => 'Enkel',
-	'admin:plugins:advanced' => 'Avanceret',
 	'admin:plugin_settings' => 'Plugin Indstillinger',
-	'admin:plugins:simple_simple_fail' => 'Kunne ikke gemme indstillinger.',
-	'admin:plugins:simple_simple_success' => 'Indstillinger gemt.',
-	'admin:plugins:simple:cannot_activate' => 'Kan ikke aktivere dette plugin. Kontroller den avancerede plugin administration for mere information.',
 	'admin:plugins:warning:unmet_dependencies_active' => 'Dette plugin er aktiv, men der er udækkede afhængigheder. Du kan støde på problemer. Se "mere information" nedenfor for yderligere oplysninger.',
 
 	'admin:plugins:dependencies:type' => 'Type',
@@ -706,6 +732,20 @@ $danish = array(
 	'admin:statistics:label:version' => "Elgg version",
 	'admin:statistics:label:version:release' => "Release",
 	'admin:statistics:label:version:version' => "Version",
+
+	'admin:server:label:php' => 'PHP',
+	'admin:server:label:web_server' => 'Web Server',
+	'admin:server:label:server' => 'Server',
+	'admin:server:label:log_location' => 'Log Lokation',
+	'admin:server:label:php_version' => 'PHP version',
+	'admin:server:label:php_ini' => 'PHP ini file location',
+	'admin:server:label:php_log' => 'PHP Log',
+	'admin:server:label:mem_avail' => 'Memory available',
+	'admin:server:label:mem_used' => 'Memory used',
+	'admin:server:error_log' => "Web server's error log",
+	'admin:server:label:post_max_size' => 'POST maximum size',
+	'admin:server:label:upload_max_filesize' => 'Upload maximum size',
+	'admin:server:warning:post_max_too_small' => '(Note: post_max_size must be larger than this value to support uploads of this size)',
 
 	'admin:user:label:search' => "Find brugere:",
 	'admin:user:label:searchbutton' => "Søg",
@@ -771,9 +811,9 @@ $danish = array(
 /**
  * Activity river
  */
-	'river:all' => 'TraicoStream',
-	'river:mine' => 'Min TraicoStream',
-	'river:friends' => 'Vennernes TraicoStreams',
+	'river:all' => 'Al aktivitet',
+	'river:mine' => 'Min aktivitet',
+	'river:friends' => 'Venners aktivitet',
 	'river:select' => 'Vis %s',
 	'river:comments:more' => '+%u mere',
 	'river:generic_comment' => 'kommenterede %s %s',
@@ -787,6 +827,7 @@ $danish = array(
 	/**
 	* Generic action words
 	*/
+
 	'save'  =>  "Gem",
 	'reset' => 'Reset',
 	'publish' => "Offentliggør", 
@@ -822,17 +863,21 @@ $danish = array(
 	'upgrade' => 'Opgrader',
 	'sort' => 'Sortér',
 	'filter' => 'Filter',
+	'new' => 'Ny',
+	'add' => 'Tilføj',
+	'create' => 'Opret',
+	'remove' => 'Fjern',
+	'revert' => 'Kør tilbage',
 
 	'site' => 'Side',
-	'activity' => 'TraicoStream',
-	'members' => 'Profiler',
+	'activity' => 'Aktivitet',
+	'members' => 'Medlemmer',
 	
 	'up' => 'Op',
 	'down' => 'Ned',
 	'top' => 'Top',
 	'bottom' => 'Bund',
-
-	'more' => 'mere',
+	'back' => 'Tilbage',
 		
 	'invite'  =>  "Invitér",
 	
@@ -880,6 +925,9 @@ $danish = array(
 	'metadata'  =>  "Metadata", 
 	'tagcloud' => "Tag cloud",
 	'tagcloud:allsitetags' => "Alle tags",
+
+	'on' => 'On',
+	'off' => 'Off',
 	
 /**
  * Entity actions
@@ -892,7 +940,8 @@ $danish = array(
 	* Input / output strings
 	*/
 	
-	'deleteconfirm'  =>  "Er du sikker på, at du vil slette dette?", 
+	'deleteconfirm'  =>  "Er du sikker på, at du vil slette dette emne?", 
+	'deleteconfirm:plural' => "Er du sikker på, at du vil slette disse emner?",
 	'fileexists'  =>  "En fil er allerede blevet uploaded. Vælg den for at erstatte den:", 
 	
 	/**
@@ -1042,6 +1091,8 @@ For at se deres personlige profil, klik her;
 
 Du kan ikke besvare via denne mail.",
 
+
+
 	'email:resetpassword:subject'  =>  "Adgangskode ændret!", 
 	'email:resetpassword:body'  =>  "Hej %s,
 	
@@ -1091,6 +1142,7 @@ Hvis det var dig, der sendte anmodningen så klik på linket nedenfor ellers ign
 	'generic_comment:notdeleted'  =>  "Beklager, vi kunne ikke slette denne kommentar.", 
 	'generic_comment:failure'  =>  "En uforudset fejl skete ved tilføjelsen af din kommentar. Prøv venligst igen.", 
 	'generic_comment:none' => 'Ingen kommentarer',
+	'generic_comment:title' => 'Kommenteret af %s',
 		
 	'generic_comment:email:subject'  =>  "Du har en ny kommentar!", 
 	'generic_comment:email:body'  =>  "Du har en ny kommentar til din \"%s\" fra %s. Der står:
@@ -1127,11 +1179,12 @@ Du kan ikke svare via denne mail.",
 	'actiongatekeeper:tokeninvalid'  =>  "Vi stødte på en fejl (token mismatch). Det betyder formegentlig, at siden du brugte er udløbet. Prøv venligst igen.", 
 	'actiongatekeeper:timeerror'  =>  "Siden du brugte er udløbet. Genopfrisk siden og prøv igen.", 
 	'actiongatekeeper:pluginprevents'  =>  "En udvidelse har forhindret denne form i at blive indsendt.", 
+	'actiongatekeeper:uploadexceeded' => 'Størrelsen på uploadet fil(-erne) overstiger begrænsningen, som er sat af administratoren',
+
 
 	/**
 	* Word blacklists
-	*/
-	
+	*/	
 	'word:blacklist'  =>  "og, den, det, da, men hun, han, hendes, hans, en, et, ikke, også, om, nu, dermed, således, til, stadig, ligesom, derimod, derfor, omvendt, tværtimod, hellere, følge, yderligere, alligevel, imens, derefter, denne, dette, synes, hvem, hvad, hvor, hvornår, hvordan, hvorfor, hvorledes, hvormed",
 	
 	/**

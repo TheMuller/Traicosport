@@ -62,6 +62,8 @@
 	'event_calendar:view_link' => "Vis denne event",
 	'event_calendar:edit_link' => "Ændre denne event",
 	'event_calendar:delete_link' => "Slet denne event",
+	'event_calendar:delete_confirm_title' => "Bekræft sletning af event",
+	'event_calendar:delete_confirm_description' => "Er du sikker på, at du vil slette denne event (\"%s\")? Sletningen kan ikke fortrydes.",
 	'event_calendar:delete_response' => "Denne event er slettet.",
 	'event_calendar:error_delete' => "Denne event eksisterer ikke eller du har ikke ret til at slette den.",
 	'event_calendar:delete_cancel_response' => "Event sletningen annulleret.",
@@ -171,9 +173,7 @@
 	'event_calendar:request_subject' => "Du har modtaget en event anmodning",
 	'event_calendar:request_message' => "%s anmoder om at deltage i eventen \"%s\", her:
 
-%s
-
-tilføjet til hendes/hans personlige kalender.
+%s.
 
 Du kan styre kalender anmodninger for denne event her:
 
@@ -251,10 +251,7 @@ Du kan styre kalender anmodninger for denne event her:
 	'event_calendar:personal_manage:label' => "Kalender rettigheder",
 	'event_calendar:personal_manage:description' => "Afgør op personer kan tilføje events til deres personlige kalendere eller ej: <br/>Åben tilmelding = alle tilmelder sig deltager automatisk "
 			."<br/>Manuel godkendelse = Administrator skal godkende tilmeldinger <br/>Lukket for tilmeldinger = Vente liste beholdes eller slettes efter valg <br/>Privat arrangement = Kun du kan se arrangmentet.",
-	'event_calendar:personal_manage:by_event:open' => "Åben. Brugerne kan gratis tilmelde sig dette event.",
-	'event_calendar:personal_manage:by_event:closed' => "Lukket. Brugerne kan tilmelde sig eventet ved at få godkendelse af event opretteren. Du kan modtage og godkende anmodninger.",
-	'event_calendar:personal_manage:by_event:private' => "Privat. Du eller andre event administratorer kan tilføje denne event til personlige kalendere. Der er ingen mulighed for andre brugere for at tilmelde sig denne event.",
-					
+			
 	'event_calendar:settings:full_calendar:title' => "Supporter fuld kalender",
 	'event_calendar:modify_full_calendar:error' => "Fejl: Kunne ikke ændre til fuld kalender",
 	'event_calendar:from_label' => "Fra:",
@@ -262,79 +259,6 @@ Du kan styre kalender anmodninger for denne event her:
 	'event_calendar:settings:timeformat:title' => "Tids format",
 	'event_calendar:time_format:12hour' => "12 timer (am/pm)",
 	'event_calendar:time_format:24hour' => "24 timer",
-	'event_calendar:all_day_label' => "Heldags event",
-	'event_calendar:repeat_interval_label' => "Gentag hver",
-	'event_calendar:repeat_weeks' => "uge(r)",
-	'event_calendar:on_these_days' => "på disse dage:",
-	'event_calendar:day_abbrev:monday' => "M",
-	'event_calendar:day_abbrev:tuesday' => "T",
-	'event_calendar:day_abbrev:wednesday' => "O",
-	'event_calendar:day_abbrev:thursday' => "T",
-	'event_calendar:day_abbrev:friday' => "F",
-	'event_calendar:day_abbrev:saturday' => "L",
-	'event_calendar:day_abbrev:sunday' => "S",
-	'event_calendar:dow:full:monday' => "Mandag",
-	'event_calendar:dow:full:tuesday' => "Tirsdag",
-	'event_calendar:dow:full:wednesday' => "Onsdag",
-	'event_calendar:dow:full:thursday' => "Torsdag",
-	'event_calendar:dow:full:friday' => "Fredag",
-	'event_calendar:dow:full:saturday' => "Lørdag",
-	'event_calendar:dow:full:sunday' => "Søndag",
-	'event_calendar:schedule_type:poll' => "Opret afstemning for at spørge de tilmeldte om dag/tid",
-	'event_calendar:schedule_type:fixed' => "Sæt dag/tid",
-	'elgg_calendar:send_reminder_label' => "Send påmindelse",
-	'elgg_calendar:send_reminder_before' => "før",
-	'event_calendar:interval:minute' => "minut(er)",
-	'event_calendar:interval:hour' => "time(r)",
-	'event_calendar:interval:day' => "dag(e)",
-	'event_calendar:site_calendar' => "Side kalender",
-	'event_calendar:calendar_label' => "Kalender",
-	'event_calendar:calendar_description' => "Kalender for denne event.",
-	'event_calendar:are_you_sure' => "Er du sikker på denne ændring?",
-	'event_calendar:schedule:header' => "Planlæg",
-	'event_calendar:permissions:header' => "Tilladelser",
-	'event_calendar:read_access' => "Læs adgang",
-	'event_calendar:web_conference_label' => "Inkluder en web conference til denne event.",
-	'event_calendar:share_ownership:label' => "Del ejerskab til denne event",
-	'event_calendar:share_ownership:description' => "Tillad følgende personer til at ændre eller slette denne event, inviter deltagere, osv.",
-	'event_calendar:settings:fewer_fields:title' => "Skjul felter med pris, kontakt, organisator og lang beskrivelse",
-	'event_calendar:settings:restricted_times:title' => "Begræns tid mellem 6:00 og 21:00",
-	'event_calendar:add_event' => "Tilføj event",
-	'event_calendar:schedule_event' => "Planlæg event",
-	'event_calendar:list_polls' => "Vis event afstemninger",
-	'event_calendar:edit_form:error:missing_title' => "Fejl: udfyld venligst manglende titel.",
-	'event_calendar:repeated_event:week_interval' => "hver %s uger.",
-	'event_calendar:repeated_event:week_single' => "hver uge.",
-	'event_calendar:repeated_event:format' => "Starter den %s og gentaget den %s",
-	'event_calendar:settings:repeated_events:title' => "Tillad gentagende events (virker lige nu kun på den fulde kalender)",
-	'event_calendar:settings:reminders:title' => "Tillad afsendelse af påmindelser",
-	'event_calendar:reminder:subject' => "Påmindelse for event: %s",
-	'event_calendar:reminder:body' => "Eventen
-
-%s 
-
-finder sted på
-
-%s.
-	
-Du kan besøge eventsiden her:
-%s
-	",
-			
-	/**
-	 * BBB support
-	*/
-			
-	'event_calendar:bbb_server_url' => "Big Blue Button server URL (skal ende med skråstreg)",
-	'event_calendar:bbb_security_salt' => "Big Blue Button security salt",
-	'event_calendar:bbb_create_error' => "Fejl: ikke muligt at starte BBB conference, beskeden var: %s",
-	'event_calendar:conference_create_error' => "Fejl: ikke muligt at oprette en web conference.",
-	'event_calendar:bbb_settings_error' => "Fejl: skal sætte conference URL og salt i plugin indstillinger",
-	'event_calendar:couldnotjoin' => "Fejl: ikke muligt at deltage i conference.",
-	'event_calendar:join_conf_button' => "Deltag i conference",
-			
-	'event_calendar:poll_suffix' => "(afstemning)",
-	'event_calendar:resend_poll_invitation' => "Vil du gøre afstemningsdeltagere opmærksom på at opsætningen er ændret?",
 		
 	/**
 	 * Event calendar river
@@ -349,10 +273,14 @@ Du kan besøge eventsiden her:
     'event_calendar:river:updated' => "%s opdateret",
     'event_calendar:river:annotated1' => "%s tilføjet",
 	'event_calendar:river:annotated2' => "til hendes/hans persnlige kalender.",
-
+	 
 	//these get inserted into the river links to take the user to the entity
     'event_calendar:river:create' => "en ny event med titel",
     'event_calendar:river:the_event' => "en event med titel",
+
+	//specials events translation
+    'event_calendar:region:Denmark' => "Danmark",
+    'event_calendar:region:Norway' => "Norge",
 
 	);
 					

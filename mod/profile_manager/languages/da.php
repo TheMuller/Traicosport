@@ -30,10 +30,7 @@
 
 		'admin:users:export' => "Export users",
 		'admin:users:inactive' => "List inactive users",
-
-		'profile_manager:registration_header' => 'Velkommen til registrering',
-		'profile_manager:registration_text' => 'Registrer dig her.',
-
+	
 		// plugin settings
 		'profile_manager:settings:registration' => 'Registrering',
 		'profile_manager:settings:edit_profile' => 'Ændre Profil',
@@ -362,8 +359,8 @@
 		'profile_manager:register:profile_icon' => 'This site requires you to upload a profile icon',
 		
 		// register accept terms
-		'profile_manager:registration:accept_terms' => "Jeg accepterer %sbetingelserne%s",
-
+		'profile_manager:registration:accept_terms' => "Jeg har hermed accepterer betingelserne %sTerms of Service%s",
+	
 		// simple access control
 		'profile_manager:simple_access_control' => 'Vælg hvem der må se din profil informationer',
 	
