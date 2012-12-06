@@ -10,7 +10,7 @@ $danish = array(
 /**
  * Menu items and titles
  */
-	'groups' => "Grupper", 
+	'groups' => "Find gruppe", 
 	'groups:owned' => "Grupper jeg styrer",
 	'groups:owned:user' => 'Gruppen %s ejer', 
 	'groups:yours' => "Mine grupper", 
