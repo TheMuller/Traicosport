@@ -10,6 +10,7 @@
     padding: 40px 0 30px;
     min-height: 70px;
     width: 100%;
+    text-align: center;
 }
 .signin-text h1{
 	font-weight:normal;
@@ -18,18 +19,50 @@
 }
 .index_teaser .signin-header{
 	position:relative;
-    float:left;
+    float:center;
 }
 .index_teaser .signin-text{
 	width:100%;
 	position:relative;
-    float:left;
+    float:center;
 }
 .index_teaser .signin-button{
 	position:relative;
     float: right;
     padding-right: 20px;
 }
+.index_teaser .reg_area{
+	position:relative;
+    float: right;
+}
+.index_teaser .reg_join{
+	position:relative;
+    float: left;
+    margin-right: 30px;
+    background-color: #E64371;
+    padding: 11px 20px;
+    border-color: #C23860 #E2E7EA #E2E7EA #C23860;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px rgba(1, 0, 0, 0.15) inset;
+    text-shadow: 1px 1px 0 #D73057;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.index_teaser .reg_login{
+	position:relative;
+    float: left;
+    background-color: #74A5B2;
+    padding: 11px 20px;
+    border-color: #8E9AA0 #DEE5E7 #DEE5E7 #8E9AA0;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px rgba(1, 0, 0, 0.15) inset;
+    text-shadow: 1px 1px 0 #748B96;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
 .ani-button {
     display:block;
     width:64px;

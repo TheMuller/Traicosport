@@ -159,7 +159,7 @@
   	text-align: right;
 	position: relative;
     float: right;
-    margin: -26px 180px 20px 0;
+    margin: -36px 180px 20px 0;
 }
 .elgg-menu-site-default > li {
     display: inline-block;

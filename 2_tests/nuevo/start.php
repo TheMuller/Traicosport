@@ -195,7 +195,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     			'href' => "/blog/owner/$user->username",
     			'text' => elgg_echo('blog'),
     			'priority' => 303,
-    			'section' => 'more', 
+    			'section' => 'more',
     		));
 
     		elgg_unregister_menu_item('site', 'polls');
@@ -297,7 +297,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     				'section' => 'more',
     			));
     		}
-            */
+
     		if (elgg_is_active_plugin('reportedcontent')) {
     			elgg_unregister_menu_item('footer', 'report_this');
 
@@ -323,8 +323,8 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     			'priority' => 2000,
     			'section' => 'more',
     		));
-
-	}	
+            */
+	}
 }
 
 function expages_setup_sidebar_menu() {

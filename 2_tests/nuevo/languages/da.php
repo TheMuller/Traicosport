@@ -27,7 +27,7 @@ $danish = array(
                                     <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">.. Eller registrer dig<br /> via knappen</span></p>
                                 </div>
                             ',
-	'nuevo:subhead'			=> 'Sætter dig i direkte kontakt med alt indenfor sporten..',
+	'nuevo:subhead'			=> '<span style="padding-bottom:0px;font-size:28px;font-weight:bold;"><span style="color:#FFFFFF">Traico</span>Sport</span><br />Sætter dig i kontakt med sporten..',
 	'nuevo:thewire'			=> 'Hvad er dine sportstanker lige nu? Fortæl resten af verdenen det:',
 	'nuevo:tooltip'      	=> 'Gå til forsiden',
 

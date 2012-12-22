@@ -9,8 +9,14 @@ $english = array(
 	'nuevo:register'		=> 'To start your sportsprofile on Traicosport, sign up to the left.. it\'s free!',
 	'nuevo:signup'			=> 'Go to registration',
 		// Index Quotes
-	'nuevo:teaserheader'	=> '<span style="color:#74A5B2">Find</span> and <span style="color:#74A5B2">Share</span> everything about<br /> the sports, clubs and sportsathletes you love..',
-	'nuevo:teaser'			=> '<div style="float:left;width:150px;margin:20px 20px 40px 0px;">
+	'nuevo:teaserheader'	=> '<div class="reg_area"><div class="reg_join">Join Now</div><div class="reg_login">Login</div></div><span style="color:#74A5B2">Find</span> and <span style="color:#74A5B2">Share</span> everything about<br /> the sports, clubs and sportsathletes you love..',
+	'nuevo:teaser'			=> '<div style="width:999px;border:1px;clear:both;">
+                                    <div style="float:left;width:333px;">Track Your Sports</div>
+                                    <div style="float:left;width:333px;">Find Sports People and Groups</div>
+                                    <div style="float:left;width:333px;">Share Your Sport</div>
+                                </div>
+                                <div style="width:999px;border:1px;clear:both;">
+                                <div style="float:left;width:150px;margin:20px 20px 40px 50px;">
                                     <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">Become a member through Facebook or Twitter..</span></p>
                                 </div>
                                 <div style="float:left;width:150px;margin:20px 40px;" id="login_with_facebook">
@@ -26,8 +32,9 @@ $english = array(
                                 <div style="float:left;height:80px;width:200px;margin:20px 0px 40px 30px;background: url(http://demo.klubhjemmeside.dk/mod/nuevo/graphics/curved_arrow.png) no-repeat bottom right;">
                                     <p style="color:#777777;"><span style="padding-top:20px;font-size:16px;">.. Or register by clicking<br /> the button</span></p>
                                 </div>
+                                </div>
                             ',
-	'nuevo:subhead'			=> 'Gives you a direct contact to the world of sports..',
+	'nuevo:subhead'			=> '<span style="padding-bottom:0px;font-size:28px;font-weight:bold;"><span style="color:#FFFFFF">Traico</span>Sport</span><br />Connects you to the sport..',
 	'nuevo:thewire'			=> 'What are you doing? Tell everyone on the wire:',
 	'nuevo:tooltip'      	=> 'Go to index',
 
