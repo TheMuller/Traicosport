@@ -51,7 +51,7 @@ function nuevo_init() {
 
 	expages_setup_sidebar_menu();
     // replace the default index page
-    elgg_register_plugin_hook_handler('index','system','custom_index', 1);
+    //elgg_register_plugin_hook_handler('index','system','custom_index', 1);
 }
 
 function custom_expages_page_handler($page, $handler) {
@@ -129,9 +129,11 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
 
 	$owner = elgg_get_page_owner_entity();
 
+
 	if (elgg_is_logged_in() && elgg_get_context() != 'admin') {
 		$user = elgg_get_logged_in_user_entity();
 
+        /*
   		elgg_unregister_menu_item('topbar', 'dashboard');
   		elgg_register_menu_item('page', array(
   			'name' => 'dashboard',
@@ -140,6 +142,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
   			'priority' => 100,
   			'section' => 'more',
   		));
+
 
 		if (elgg_is_active_plugin('messages')) {
 			elgg_unregister_menu_item('topbar', 'messages');
@@ -159,7 +162,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
 				'section' => 'more',
 			));
 		}
-
+        */
 		elgg_register_menu_item('page', array(
 			'name' => 'menu',
 			'text' => elgg_echo('menu'),
@@ -236,6 +239,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
 			'section' => 'more',
 		));
 
+/*
     		elgg_unregister_menu_item('topbar', 'friends');
     		elgg_register_menu_item('page', array(
     			'name' => 'friends',
@@ -245,7 +249,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     			'priority' => 400,
     			'section' => 'more',
     		));
-
+*/
     		elgg_register_menu_item('page', array(
     			'name' => 'fb_friends',
     			'parent_name' => 'account',
@@ -255,6 +259,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     			'section' => 'more',
     		));
 
+/*
     		if (elgg_is_active_plugin('profile')) {
     			elgg_unregister_menu_item('topbar', 'profile');
     			elgg_register_menu_item('page', array(
@@ -296,7 +301,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     				'section' => 'more',
     			));
     		}
-
+ */
     		if (elgg_is_active_plugin('reportedcontent')) {
     			elgg_unregister_menu_item('footer', 'report_this');
 
@@ -312,6 +317,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     				'priority' => 1000,
     			));
     		}
+            /*
     		elgg_unregister_menu_item('topbar', 'logout');
     		elgg_register_menu_item('page', array(
     			'name' => 'logout',
@@ -322,6 +328,7 @@ elgg_register_plugin_hook_handler('register', 'menu:site', 'groups', 2000);
     			'priority' => 2000,
     			'section' => 'more',
     		));
+            */
 
 	}	
 }

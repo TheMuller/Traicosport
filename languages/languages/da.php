@@ -229,6 +229,7 @@ $danish = array(
 	'LoginException:PasswordFailure' => 'Vi kunne ikke logge dig ind. Tjek venligst dit brugernavn og adgangskode.',
 	'LoginException:AccountLocked' => 'Din konto er blevet spærret på grund af for mange log ind fejl.',
 	'LoginException:ChangePasswordFailure' => 'Fejlede i nuværende password check.',
+	'LoginException:Unknown' => 'Vi kunne ikke logge dig ind pga. en ukendt fejl.',
 		
 	'deprecatedfunction' => 'Warning: This code uses the deprecated function \'%s\' and is not compatible with this version of Elgg',
 	
@@ -405,6 +406,7 @@ $danish = array(
 	'profile:editdefault:delete:success' => 'Standardprofil element slettet!',
 	'profile:defaultprofile:reset' => 'Standard profil genoprettet',
 	'profile:resetdefault' => 'Genopret standard profil',
+	'profile:resetdefault:confirm' => 'Er du sikker på, at du vil slette dine personlige profil felter?',
 	'profile:explainchangefields' => "Du kan erstatte de eksisterende felter i profilen med dine egne ved hjælp af formularen nedenfor. \n\n Giv det nye profilfelt en navn, for eksempel, 'Favorit hold', vælg derefter felt type (f.eks tekst, url, tags), og klik på knappen 'Tilføj'. For at ændre rækkefølgen af felterne træk i markeringen ved siden af navnet. For at redigere et feltnavn - klik på navnet for at gøre teksten redigerbar. \n\n Du kan altid vende tilbage til standardindstillingerne for profilen, men du vil miste alle data, der allerede er tilføjet i de brugerdefinerede felter på profil sider.",
 	'profile:editdefault:success' => 'Element føjet til standard profilen',
 	'profile:editdefault:fail' => 'Standard profilen kunne ikke gemmes',
@@ -576,11 +578,12 @@ $danish = array(
 
 	'admin:appearance' => 'Udseende',
 	'admin:administer_utilities' => 'Hjælpeprogrammer',
-	'admin:utilities' => 'Hjælpeprogrammer',
+	'admin:develop_utilities' => 'Hjælpeprogrammer',
 
 	'admin:users' => "Brugere",
 	'admin:users:online' => 'Online i øjeblikket',
 	'admin:users:newest' => 'Nyeste',
+	'admin:users:admins' => 'Administratorer',
 	'admin:users:add' => 'Tilføj ny bruger',
 	'admin:users:description' => "Dette administrationspanel giver dig mulighed for at kontrollere brugernes indstillinger. Vælg herunder for at komme i gang.",
 	'admin:users:adduser:label' => "Klik her for at tilføje en ny bruger...",
@@ -661,6 +664,7 @@ $danish = array(
 
 
 	'admin:notices:could_not_delete' => 'Kunne ikke slette besked.',
+	'item:object:admin_notice' => 'Admin besked',
 
 	'admin:options' => 'Admin muligheder',
 
@@ -688,6 +692,9 @@ $danish = array(
 	'admin:plugins:label:categories' => 'Kategorier',
 	'admin:plugins:label:licence' => "Licens",
 	'admin:plugins:label:website' => "URL",
+	'admin:plugins:label:repository' => "Kode",
+	'admin:plugins:label:bugtracker' => "Report issue",
+	'admin:plugins:label:donate' => "Doner",
 	'admin:plugins:label:moreinfo' => 'mere info',
 	'admin:plugins:label:version' => 'Version',
 	'admin:plugins:label:location' => 'Placering',
@@ -729,6 +736,7 @@ $danish = array(
 	'admin:statistics:label:numusers' => "Antal brugere",
 	'admin:statistics:label:numonline' => "Antal brugere online",
 	'admin:statistics:label:onlineusers' => "Brugere online nu",
+	'admin:statistics:label:admins'=>"Admins",
 	'admin:statistics:label:version' => "Elgg version",
 	'admin:statistics:label:version:release' => "Release",
 	'admin:statistics:label:version:version' => "Version",
@@ -969,17 +977,17 @@ Vi anbefaler, at du ændrer din adgangskode, når du har logget ind.
 **/
 	
 	'systemmessages:dismiss'  =>  "klik for at lukke",
+
 	
 /**
 * Import / export
-*/
-	
+*/	
 	'importsuccess'  =>  "Data import lykkedes", 
 	'importfail'  =>  "OpenDD data import mislykkedes",
 	
-	/**
-	* Time
-	*/
+/**
+ * Time
+ */
 	
 	'friendlytime:justnow' => "lige nu", 
 	'friendlytime:minutes' => "%s minutter siden", 
@@ -1043,12 +1051,16 @@ Vi anbefaler, at du ændrer din adgangskode, når du har logget ind.
 	'installation:simplecache:description' => "Simple cache øger præstationen ved at cache statisk indhold inklusive nogle CSS og JavaScript filer. Normalt vil du have dette slået til.",
 	'installation:simplecache:label' => "Brug simple cache (anbefalet)",
 	
-	'installation:viewpathcache:description' => "View filepath cache nedsætter loadtiden på plugins ved at cache placeringen af deres  visninger.",
-	'installation:viewpathcache:label' => "Brug view filepath cache (anbefalet)",
+	'installation:systemcache:description' => "View filepath cache nedsætter loadtiden på plugins ved at cache placeringen af deres  visninger.",
+	'installation:systemcache:label' => "Brug view filepath cache (anbefalet)",
 	
 	'upgrading' => 'Opgraderer...',
 	'upgrade:db' => 'Din database blev opgraderet.',
 	'upgrade:core' => 'Din elgg installation blev opgraderet.',
+	'upgrade:unlock' => 'Unlock upgrade',
+	'upgrade:unlock:confirm' => "The database is locked for another upgrade. Running concurrent upgrades is dangerous. You should only continue if you know there is not another upgrade running. Unlock?",
+	'upgrade:locked' => "Cannot upgrade. Another upgrade is running. To clear the upgrade lock, visit the Admin section.",
+	'upgrade:unlock:success' => "Upgrade unlocked suscessfully.",
 	'upgrade:unable_to_upgrade' => 'Kunne ikke opgradere.',
 	'upgrade:unable_to_upgrade_info' =>
 		'This installation cannot be upgraded because legacy views
@@ -1127,7 +1139,7 @@ Hvis det var dig, der sendte anmodningen så klik på linket nedenfor ellers ign
 	* Comments
 	*/
 	
-	'comments:count'  =>  "%s kommntarer",
+	'comments:count'  =>  "%s kommentarer",
 	
 	'riveraction:annotation:generic_comment'  =>  "%s har kommenteret %s",
 	
@@ -1143,6 +1155,7 @@ Hvis det var dig, der sendte anmodningen så klik på linket nedenfor ellers ign
 	'generic_comment:failure'  =>  "En uforudset fejl skete ved tilføjelsen af din kommentar. Prøv venligst igen.",
 	'generic_comment:none' => 'Ingen kommentarer',
 	'generic_comment:title' => 'Kommenteret af %s',
+	'generic_comment:on' => '%s på %s',
 		
 	'generic_comment:email:subject'  =>  "Du har en ny kommentar!", 
 	'generic_comment:email:body'  =>  "Du har en ny kommentar til din \"%s\" fra %s. Der står:
@@ -1171,10 +1184,10 @@ Du kan ikke svare via denne mail.",
 	'entity:delete:success'  =>  "Enheden %s er blevet slettet", 
 	'entity:delete:fail'  =>  "Enheden %s kunne ikke slettes", 
 
+
 /**
 * Action gatekeeper
-*/
-	
+*/	
 	'actiongatekeeper:missingfields'  =>  "Form mangler __token eller __ts felter", 
 	'actiongatekeeper:tokeninvalid'  =>  "Vi stødte på en fejl (token mismatch). Det betyder formegentlig, at siden du brugte er udløbet. Prøv venligst igen.",
 	'actiongatekeeper:timeerror'  =>  "Siden du brugte er udløbet. Genopfrisk siden og prøv igen.", 
@@ -1182,14 +1195,14 @@ Du kan ikke svare via denne mail.",
 	'actiongatekeeper:uploadexceeded' => 'Størrelsen på uploadet fil(-erne) overstiger begrænsningen, som er sat af administratoren',
 
 
-	/**
-	* Word blacklists
-	*/	
+/**
+ * Word blacklists
+ */	
 	'word:blacklist'  =>  "og, den, det, da, men hun, han, hendes, hans, en, et, ikke, også, om, nu, dermed, således, til, stadig, ligesom, derimod, derfor, omvendt, tværtimod, hellere, følge, yderligere, alligevel, imens, derefter, denne, dette, synes, hvem, hvad, hvor, hvornår, hvordan, hvorfor, hvorledes, hvormed",
 	
-	/**
-	* Tag labels
-	*/
+/**
+ * Tag labels
+ */
 	
 	'tag_names:tags' => 'Tags',	  
 	'tags:site_cloud' => 'Site Tag Cloud',
@@ -1201,9 +1214,9 @@ Du kan ikke svare via denne mail.",
 	'js:security:token_refresh_failed' => 'Kan ikke kontakte %s. Du kan muligvis opleve problemer med at gemme indhold.',
 	'js:security:token_refreshed' => 'Forbindelse med %s genoprettet!',
 			
-	/**
-	* Languages according to ISO 639-1
-	*/	
+/**
+ * Languages according to ISO 639-1
+ */	
 	'aa'  =>  "Afar", 
 	'ab'  =>  "Abkhasisk", 
 	'af'  =>  "Afrikaans", 
@@ -1350,5 +1363,3 @@ Du kan ikke svare via denne mail.",
 );
 
 add_translation("da",$danish);
-
-?>

@@ -321,3 +321,11 @@ fieldset .elgg-module {
     width: 40px;
     height: 40px;
 }
+
+/* ---- Traico changes --- */
+
+.widgets_image_slider_image span {
+    color: #FFFFFF;
+    font-size: 24px;
+    text-shadow: none !important;
+}

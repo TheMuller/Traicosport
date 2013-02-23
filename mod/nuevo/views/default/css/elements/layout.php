@@ -45,7 +45,15 @@ Fade blue = 74A5B2
 }
 /***** TOPBAR ******/
 .elgg-page-topbar {
-	display:none;
+    background: url(<?php echo $vars['url']; ?>mod/nuevo/graphics/gradients/topbar.png) repeat-x scroll left bottom #444444;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    z-index: 9000;
+    height: 30px;
+}
+.elgg-page-topbar > .elgg-inner {
+    margin: auto;
+    width: 990px;
 }
 
 /***** PAGE MESSAGES ******/
